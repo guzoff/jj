@@ -1,4 +1,4 @@
-package com.guzoff.configuration;
+package com.guzoff.jj.configuration;
 
 import java.util.Properties;
 import javax.sql.DataSource;

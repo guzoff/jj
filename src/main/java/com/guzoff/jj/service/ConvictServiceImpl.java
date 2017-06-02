@@ -1,11 +1,11 @@
-package com.guzoff.service;
+package com.guzoff.jj.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.guzoff.model.Convict;
-import com.guzoff.dao.ConvictDAO;
+import com.guzoff.jj.model.Convict;
+import com.guzoff.jj.dao.ConvictDAO;
 
 @Service("convictService")
 @Transactional
@@ -55,7 +55,8 @@ public class ConvictServiceImpl implements ConvictService {
     @Override
     public boolean isConvictNickUnique(Integer id, String nickname) {
         Convict convict = findConvictByNick(nickname);
-        return (convict == null || convict.getId().equals(id));
+        return convict == null 
+                || convict.getId().equals(id);
     }
 
 }

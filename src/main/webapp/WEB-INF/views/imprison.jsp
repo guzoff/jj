@@ -48,8 +48,13 @@
                 </tr>
 
                 <tr>
-                    <td><label>Crime Code: </label> </td>
-                    <td><form:input path="crimeCode" id="crimeCode"/></td>
+                    <td><label>Crime: </label> </td>
+                    <td>
+                        <form:select path="crimeCode" id="crimeCode">
+                            <form:option value="-" label="--Select Crime--"/>
+                            <form:options items="${convict.CRIME_MAP}"/>
+                        </form:select>
+                    </td>
                     <td><form:errors path="crimeCode" cssClass="error"/></td>
                 </tr>
 

@@ -1,7 +1,9 @@
-package com.guzoff.model;
+package com.guzoff.jj.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +20,24 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name = "CONVICT")
 public class Convict implements Serializable {
 
+    private static final Map<String, String> CRIME_MAP = new HashMap<>();
+    
+    // 8 crimes: 1 crime for every bit in a byte
+    static {
+        CRIME_MAP.put("1", "Encapsulated inheritance inside polymorphism and called it abstraction");
+        CRIME_MAP.put("2", "Was too public in his/her methods");
+        CRIME_MAP.put("3", "Turned SOLID into SID");
+        CRIME_MAP.put("4", "Never synchronized");
+        CRIME_MAP.put("5", "Always synchronized");
+        CRIME_MAP.put("6", "Was too wet - never DRY");
+        CRIME_MAP.put("7", "Washed the REST with the SOAP");
+        CRIME_MAP.put("8", "Thought that he/she was unsigned");
+    }
+    
+    public Map<String, String> getCRIME_MAP() {
+        return CRIME_MAP;
+    }
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -85,6 +105,17 @@ public class Convict implements Serializable {
 
     public void setCrimeCode(String crimeCode) {
         this.crimeCode = crimeCode;
+    }
+    
+    /*
+     *  Method for obtaining "binary" version of crimeCode
+     */
+    public int getIntCode() {
+        int code = 1;
+        for (int i = 1; i < Integer.parseInt(crimeCode); i++) {
+            code *= 10;
+        }
+        return code;
     }
 
     public Short getSentencePeriod() {

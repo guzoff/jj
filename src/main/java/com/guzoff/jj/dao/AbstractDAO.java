@@ -1,4 +1,4 @@
-package com.guzoff.dao;
+package com.guzoff.jj.dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

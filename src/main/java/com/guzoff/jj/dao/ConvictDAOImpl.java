@@ -1,11 +1,11 @@
-package com.guzoff.dao;
+package com.guzoff.jj.dao;
 
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-import com.guzoff.model.Convict;
+import com.guzoff.jj.model.Convict;
 
 @Repository("convictDao")
 public class ConvictDAOImpl extends AbstractDAO<Integer, Convict> implements ConvictDAO {

@@ -1,4 +1,4 @@
-package com.guzoff.controller;
+package com.guzoff.jj.controller;
 
 import java.util.List;
 import java.util.Locale;
@@ -13,8 +13,8 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.guzoff.model.Convict;
-import com.guzoff.service.ConvictService;
+import com.guzoff.jj.model.Convict;
+import com.guzoff.jj.service.ConvictService;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

@@ -1,4 +1,4 @@
-package com.guzoff.configuration;
+package com.guzoff.jj.configuration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
