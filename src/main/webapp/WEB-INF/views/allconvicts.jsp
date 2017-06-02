@@ -24,7 +24,8 @@
 
 
     <body>
-        <h2>List of Convicts</h2>  
+        <h2>Welcome to Java Jail!</h2>  
+        <h3>Our convicts for now:</h3>
         <table>
             <tr>
                 <th>Nickname</th><th>Sex</th><th>Jailing Date</th><th>Crime Code</th><th>Sentence Period</th><th></th>
