@@ -51,6 +51,7 @@
                     <td><label>Crime: </label> </td>
                     <td>
                         <form:select path="crimeCode" id="crimeCode">
+                            <form:option value="-" label="--Select Crime--"/>
                             <form:options items="${convict.CRIME_MAP}"/>
                         </form:select>
                     </td>
